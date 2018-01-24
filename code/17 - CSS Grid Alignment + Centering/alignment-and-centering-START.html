@@ -6,6 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
   <title>CSS Grid Alignment + Centering!</title>
+  <style>
+    /*
+      justify-items:
+      align-items:
+
+      justify-content:
+      align-content:
+
+      align-self:
+      justify-self:
+
+      justify-* is row/main axis | row for grid, main for flex
+      align-* is column/cross axis | column for grid, cross for flex
+    */
+
+    .container {
+      display: grid;
+      grid-gap: 20px;
+      height: 80vH;
+      border: 10px solid var(--yellow);
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(6, 100px);
+      justify-items: center;
+      align-items: center;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+
+    .itm {
+      background-color: #fff;
+      font-size: 20px;
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,7 +74,7 @@
     <div class="itm itm28">28</div>
     <div class="itm itm29">29</div>
     <div class="itm itm30">30</div>
-    <div class="itm itm31">31</div>
+    <!-- <div class="itm itm31">31</div>
     <div class="itm itm32">32</div>
     <div class="itm itm33">33</div>
     <div class="itm itm34">34</div>
@@ -49,30 +83,8 @@
     <div class="itm itm37">37</div>
     <div class="itm itm38">38</div>
     <div class="itm itm39">39</div>
-    <div class="itm itm40">40</div>
+    <div class="itm itm40">40</div> -->
   </div>
-
-  <style>
-    /*
-      justify-items:
-      align-items:
-
-      justify-content:
-      align-content:
-
-      align-self:
-      justify-self:
-
-      justify-* is row axis
-      align-* is column axis
-    */
-
-    .container {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
-    }
-  </style>
 </body>
 
 </html>

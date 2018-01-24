@@ -29,7 +29,7 @@
     body {
       padding: 50px;
       font-family: sans-serif;
-      background: linear-gradient(to right, #F93D66, #6D47D9);
+      background: linear-gradient(to top, #F93D66, #6D47D9);
     }
 
     h1,
@@ -71,6 +71,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      padding: .5rem;
+      border: .375rem solid #ddbdff;
     }
 
     .item__overlay {
@@ -161,7 +163,7 @@
     function generateHTML([h, v]) {
       return `
         <div class="item h${h} v${v}">
-          <img src="images/${randomNumber(12)}.jpg">
+          <img src="images/${randomNumber(50)}.jpg">
           <div class="item__overlay">
             <button>View →</button>
           </div>
@@ -184,7 +186,7 @@
       overlay.classList.remove('open');
     }
 
-    const digits = Array.from({ length: 50 }, () => [randomNumber(4), randomNumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]])
+    const digits = Array.from({ length: 50 }, () => [randomNumber(4), randomNumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]])
 
     const html = digits.map(generateHTML).join('');
     gallery.innerHTML = html;
