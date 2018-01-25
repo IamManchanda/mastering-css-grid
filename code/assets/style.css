@@ -37,7 +37,7 @@ body {
   background-color: #6d47d9;
   background-size: 340px, auto;
   min-height: calc(100vh - 100px);
-  margin: 120px;
+  margin: 80px;
   /* background: white; */
   background-position: fixed;
   letter-spacing: -1px;
